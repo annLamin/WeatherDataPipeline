@@ -3,10 +3,10 @@ import pandas as pd
 from datetime import datetime, timedelta
 
 def run_openweather_etl():
-    api_key = "af34993069895cd8861fdd09b83474ea"
+    api_key = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
     lat = 42.35
     lon = 13.39
-    start_date = datetime(2024, 7, 1)
+    start_date = datetime(2022, 7, 1)
     end_date = datetime(2024, 7, 27)
 
     # Generate timestamps for each day in the range
