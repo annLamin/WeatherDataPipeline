@@ -40,3 +40,5 @@ Apache Airflow was employed to orchestrate the entire data pipeline. We configur
 - Task 1: Data extraction from the OpenWeather API.
 - Task 2: Transformation of raw data into a CSV format.
 - Task 3: Uploading the CSV file to an Amazon S3 bucket.
+Airflow’s scheduling feature ensured that the pipeline ran automatically at a one day intervals,
+adhering to the project’s requirements for regular updates of weather data.
