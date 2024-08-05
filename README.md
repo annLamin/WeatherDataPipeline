@@ -14,3 +14,29 @@ This project aimed to automate the extraction of weather data from the OpenWeath
 ![Architecture Diagram](https://github.com/annLamin/WeatherDataPipeline/blob/main/workflow_diagram.jpg)
 
 ### Technology Used
+- Python3
+- Apache-Airflow
+- Amazon EC2
+- Amazon S3
+###   Implementation
+#### Data Extraction from OpenWeather API
+OpenWeather Ltd provides global weather data via API, including current weather data, forecasts,
+nowcasts, and historical weather data. Python and the requests library were utilized to interact with
+the OpenWeather API. The API key was securely managed using environment variables to ensure
+security and prevent unauthorized access. Data extraction was scheduled to run daily to fetch the
+latest weather information
+#### Data Transformation and CSV Export
+Once the data was retrieved from the API, it was transformed into a structured CSV format using
+Python’s pandas library. This transformation included selecting relevant fields, cleaning data, and 
+formatting it appropriately for storage. The relevant features that are needed for this project for
+now are the:
+ - TimeZone: This is the location from which we want to extract the data which is Rome.
+- Date: The day we are extracting the data.
+- Temperature: The temperature of that particular day.
+The extraction can be done minutely, hourly or daily but for simplicity, I chose daily.
+
+#### Integration with Apache Airflow
+Apache Airflow was employed to orchestrate the entire data pipeline. We configured a DAG (Directed Acyclic Graph) that defined the workflow
+- Task 1: Data extraction from the OpenWeather API.
+- Task 2: Transformation of raw data into a CSV format.
+- Task 3: Uploading the CSV file to an Amazon S3 bucket.
