@@ -11,5 +11,6 @@ into their systems. This integration is very vital in the era of big data, where
 
 ### Project Overview
 This project aimed to automate the extraction of weather data from the OpenWeather API, convert it into a CSV format using Python, and upload the CSV file to Amazon S3, reducing manual intervention and ensuring consistent data collection. Python's requests and pandas libraries were used for API calls and data manipulation, while Apache Airflow managed the workflow, ensuring each step was executed in the correct order and on a regular schedule. The automation streamlined the process, making weather data continuously available for further analysis or integration with other systems.
+![Architecture Diagram]([http://url/to/img.png](https://github.com/annLamin/WeatherDataPipeline/blob/main/workflow_diagram.jpg))
 
 ### Technology Used
